@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parm's Portfolio</title>
+    <script src="/static/js/htmx.min.js"></script>
+</head>
+
+<body>
+    <h1>Parm Sran</h1>
+    <button hx-get="/message" hx-target="#message">Click me</button>
+    <div id="message"></div>
+    <div hx-post="/mouse_entered" hx-trigger="mouseenter once">
+        [Here Mouse, Mouse!]
+    </div>
+    <div hx-get="/clicked" hx-trigger="click[ctrlKey]">
+        Control Click Me
+    </div>
+</body>
+
+</html>
